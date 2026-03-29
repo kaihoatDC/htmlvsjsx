@@ -1,20 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Document setup: character encoding and responsive scaling on phones -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Browser tab title (not visible in the app UI itself) -->
     <title>Pricing Plans — React App</title>
+
+    <!--
+      Typography (Google Fonts — Inter)
+      • preconnect: speeds up font download
+      • stylesheet: loads Inter weights 400–700 used in styles.css
+    -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- This is the only HTML in the entire app -->
-    <!-- React takes over this empty div and fills it with components -->
+    <!--
+      App shell
+      React mounts here and renders the pricing cards. Almost no static HTML lives in this file.
+    -->
     <div id="root"></div>
 
-    <!-- This loads our entry file (index.jsx) which starts the React app -->
-    <!-- "type=module" tells the browser to use modern JavaScript imports -->
+    <!--
+      Bootstraps the app: loads /index.jsx (entry point). type="module" enables import/export syntax.
+    -->
     <script type="module" src="/index.jsx"></script>
 </body>
 </html>
